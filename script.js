@@ -6,18 +6,19 @@ const app = new Vue({
         sentinel: false,
     },
 
-    methods:{
+    methods: {
 
     },
 
-    created(){
-        for (let index = 0; index < 10; index++) {
+    created() {
+        for (let index = 0; index < 20; index++) {
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then((response) =>{
-            this.emailList.push(response.data.response);
-            });
+                .then((response) => {
+                    this.emailList.push(response.data.response);
+                    if (this.emailList.length == 20) {
+                        this.sentinel = true;
+                    }
+                });
         }
-        setTimeout(() =>{this.sentinel = true;}, 1000) ;
-        console.log(this.emailList);
     }
 })
