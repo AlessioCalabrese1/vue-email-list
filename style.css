@@ -1,0 +1,14 @@
+.email-container{
+    margin: 0 auto;
+    width: 35%;
+}
+
+body{
+    background-color: rgb(1, 1, 72);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
