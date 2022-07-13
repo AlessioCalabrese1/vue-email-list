@@ -3,6 +3,7 @@ const app = new Vue({
 
     data: {
         emailList: [],
+        sentinel: false,
     },
 
     methods:{
@@ -16,7 +17,7 @@ const app = new Vue({
             this.emailList.push(response.data.response);
             });
         }
-
+        setTimeout(() =>{this.sentinel = true;}, 1000) ;
         console.log(this.emailList);
     }
 })

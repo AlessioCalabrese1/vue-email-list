@@ -18,7 +18,7 @@
 
         <div class="email-container">
             <ul class="list-group">
-                <li class="list-group-item" v-for="(email,index) in emailList">
+                <li class="list-group-item" v-for="(email,index) in emailList" v-show="sentinel">
                     {{ email }}
                 </li>
             </ul>
